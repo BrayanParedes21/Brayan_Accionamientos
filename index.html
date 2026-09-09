@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Simbología Eléctrica - UNSA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- PANTALLA DE INICIO -->
+    <section id="start-screen" class="screen active">
+      <div class="header-info">
+        <h3 class="university-title" style="color: #0d47a1; margin-bottom: 5px;">Universidad Nacional San Agustín</h3>
+        <p class="student-name" style="color: #555; margin-bottom: 15px;"><strong>Estudiante:</strong> Brayan Paredes Choquecota</p>
+      </div>
+
+      <hr style="border: 0; height: 1px; background: #ddd; margin: 15px 0;">
+
+      <h1>Simbología Eléctrica</h1>
+      <p>Selecciona la norma para comenzar el juego:</p>
+      <div class="button-group">
+        <button id="btn-iec" class="btn">Norma IEC</button>
+        <button id="btn-nema" class="btn">Norma NEMA</button>
+      </div>
+    </section>
+
+    <!-- PANTALLA DE JUEGO -->
+    <section id="game-screen" class="screen">
+      <header class="game-header">
+        <h2 id="norm-title">Norma: IEC</h2>
+        <div class="stats">
+          <div class="stat-box">⏱️ Tiempo: <span id="timer">02:00</span></div>
+          <div class="stat-box">🏆 Puntos: <span id="score">0</span></div>
+        </div>
+      </header>
+
+      <!-- BANNER DE FEEDBACK -->
+      <div id="feedback-banner" class="banner hidden"></div>
+
+      <!-- ÁREA DE DRAG AND DROP -->
+      <div class="game-board">
+        <div class="column">
+          <h3>Símbolos</h3>
+          <div id="symbols-container" class="cards-container"></div>
+        </div>
+        <div class="column">
+          <h3>Significados</h3>
+          <div id="targets-container" class="targets-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANTALLA FINAL -->
+    <section id="end-screen" class="screen">
+      <div class="end-card">
+        <h2>🎉 ¡Juego Terminado!</h2>
+        <p id="star-rating" class="stars">⭐⭐⭐</p>
+        <div class="final-stats">
+          <p><strong>Puntuación Total:</strong> <span id="final-score">0</span> / <span id="max-score">0</span></p>
+          <p><strong>Aciertos:</strong> <span id="final-hits">0</span> / <span id="total-items">0</span></p>
+        </div>
+        <button id="btn-restart" class="btn">🎮 JUGAR NUEVAMENTE</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
